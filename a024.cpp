@@ -1,18 +1,30 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int gcd(int a, int b){
-	if(a%b==0){
-		return b;
-	}
-	else{
-		return gcd(b,a%b);
-	}
-} 
-
 int main(){
-	int a,b;
-	cin>>a>>b;
-	cout<<gcd(a,b)<<endl;
-	return 0;
+    int a,b,max,min,c,d;
+    cin>>a>>b;
+    c=a;
+    d=b;
+
+    do{
+        if(a>=b){
+
+            max=a; min=b;
+            a=a%b;
+
+        }
+        else{
+
+            max=b; min=a;
+            b=b%a;
+
+        }
+        
+        
+    }while(a>0 && b>0);
+    
+    cout<<min<<endl;
+    
+    return 0;
 }
