@@ -12,22 +12,28 @@ int sqsum(int n){
 
 int main(){
 	int n,num;
-	bool happy=0;
-	set<int> s;
 	cin>>num;
 	for(int i=1 ; i<=num ; i++){
-		
-	}
-	s.insert(n);
-	cout<<n<<endl;
-	while(s.find(sqsum(n)) == s.end()){
-		n=sqsum(n);
-		if(n==1){
-			happy=1;
-			break;
+	bool happy=0;
+	set<int> s;
+		cin>>n;	
+		cout<<"Case #"<<i<<": "<<n;
+		do{
+			s.insert(n);
+			n=sqsum(n);
+			if(n==1){
+				happy=1;
+				break;
+			}
+			//cout<<n<<endl;
+		}while(s.find(n) == s.end());
+		//cout<<happy<<endl<<endl;
+		if(happy){
+			cout<<" is a Happy number."<<endl;
 		}
-		s.insert(n);
+		else{
+			cout<<" is an Unhappy number."<<endl;
+		}
 	}
-	cout<<happy<<endl;
 	return 0;
 }
