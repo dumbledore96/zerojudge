@@ -2,6 +2,9 @@
 using namespace std;
 
 int main(){
+	freopen("c006in.txt","r",stdin);
+	freopen("c006out.txt","w",stdout);
+	
 	int s,a,b,c,sum;
 	while(cin>>s>>a>>b>>c){
 		if(s==0 && a==0 && b==0 && c==0){
@@ -34,3 +37,4 @@ int main(){
 	}
 	return 0;
 }
+
