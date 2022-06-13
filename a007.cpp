@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-bool prime(int n){   //åˆ¤æ–·è³ªæ•¸ 
+bool prime(int n){   //§PÂ_½è¼Æ 
 	if(n<2)
 		return 0;
 	for(int i=2 ; i*i<=n ; i++){
@@ -26,10 +26,10 @@ int main(){
 			}
 		}
 		if(ans){
-			cout<<"è³ªæ•¸"<<endl;
+			cout<<"½è¼Æ"<<endl;
 		}
 		else{
-			cout<<"éžè³ªæ•¸"<<endl;
+			cout<<"«D½è¼Æ"<<endl;
 		}
 	}
 	return 0;

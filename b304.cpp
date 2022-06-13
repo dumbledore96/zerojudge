@@ -13,10 +13,10 @@ int main(){
 		stack<char> st;
 		for(int i=0 ; i<s.length() ; i++){
 			if(s[i]=='[' || s[i]=='(') st.push(s[i]);
-			else if(s[i]==']' && st.top()=='[' && !st.empty()){
+			else if(s[i]==']' && !st.empty() && st.top()=='['){
 				st.pop();
 			}
-			else if(s[i]==')' && st.top()=='(' && !st.empty()){
+			else if(s[i]==')' && !st.empty() && st.top()=='('){
 				st.pop();
 			}
 			else{

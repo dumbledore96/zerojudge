@@ -2,7 +2,6 @@
 using namespace std;
 
 void sub(string a ,string b){
-	
 	int lena=a.length(),lenb=b.length();
 	//­t¸¹Âà´«=========================== 
 	if(lenb>lena || (lena==lenb && a<b)){
