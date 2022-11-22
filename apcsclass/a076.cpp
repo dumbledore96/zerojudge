@@ -10,7 +10,7 @@ struct node
 int main()
 {
     vector<node> v;
-    int n;
+    int n,mx;
     node nod;
     while(cin>>n){
         nod.data=n;
@@ -18,6 +18,8 @@ int main()
         nod.right=-1;
         if(v.empty()){
             nod.high=1;
+            v.push_back(nod);
+            mx=1;
         }
         else{
             int a=0;
@@ -30,10 +32,24 @@ int main()
                         break;
                     }
                     else{
-
+                        a=v[a].right;
+                    }
+                }
+                else{
+                    if(v[a].left==-1){
+                        nod.high=v[a].high+1;
+                        v.push_back(nod);
+                        v[a].left=v.size()-1;
+                        break;
+                    }
+                    else{
+                        a=v[a].left;
                     }
                 }
             }
+            //cout<<v.size()-1<<' '<<nod.data<<' '<<nod.high<<endl;
+            mx=max(nod.high,mx);
         }
     }
+    cout<<mx<<endl;
 }
